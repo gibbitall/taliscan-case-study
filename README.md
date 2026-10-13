@@ -75,7 +75,7 @@ Scan misses close the loop. Three label photos, read on the phone by Apple Visio
 
 ### Agents in production
 
-Records that fail go to a Claude Code agent team. A **lead agent** runs the loop and dispatches the work: a **researcher** hunts for missing facts, a **variant linker** connects sizes and flavors, a read-only **adversarial validator** challenges the researcher, a **senior reviewer** must sign off before anything is set aside, and a reject-by-default **gatekeeper** has the final say on any handoff to me.
+Records that fail go to a Claude Code agent team. A **lead agent** runs the loop and dispatches the work: a **researcher** hunts for missing facts, a **variant linker** connects sizes and flavors, a read-only **adversarial validator** challenges the researcher, a **senior reviewer** must sign off before anything is set aside, a reject-by-default **gatekeeper** has the final say on any handoff to me, and a low-cost **monitor** watches the run's health.
 
 The guardrails are enforced, not requested: 17 programmatic checks, hooks that block edits weakening enforcement, and a post-mortem agent that grades each run and proposes rule changes.
 
