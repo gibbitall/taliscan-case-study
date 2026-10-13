@@ -1,11 +1,11 @@
 # Agent roles: the catalog repair team
 
 > **What it shows:** the Claude Code agent team that repairs product records that fail the gold
-> gate. Each role is a separate agent definition with its own model, tool permissions, and
+> gate, dispatched by the lead agent (the Claude Code session running the loop). Each role is a separate agent definition with its own model, tool permissions, and
 > hook-enforced limits. Prompt bodies are cut to the rules that keep the team's work trustworthy.
 > **Source:** y2-backend `.claude/agents/` (commit per file): `fixer-researcher.md` 814b9465,
 > `fixer-anchor.md` 6cefd63a, `fixer-validator.md` d87e9081, `fixer-senior.md` d87e9081,
-> `fixer-deferral-gate.md` d87e9081, `loop-monitor.md` 000f56ad.
+> `fixer-deferral-gate.md` d87e9081.
 > Excerpt, lightly edited for length. Cuts are marked `... (trimmed)`.
 
 ## 1. Researcher: fills in missing fields
@@ -150,19 +150,5 @@ If ANY of these conditions fail, **REJECT** and provide specific instructions fo
 Return EXACTLY one JSON object. No markdown fences, no surrounding text.
 ... (trimmed)
 4. **No sympathy deferrals.** A product having many research rounds doesn't earn approval. What matters is whether the RIGHT sources were tried.
-... (trimmed)
-````
-
-## 6. Monitor: low-cost health checks
-
-````markdown
----
-name: loop-monitor
-description: Lightweight loop health monitor. Reads loop state, enforcement status, and pipeline metrics. Use this agent for quick status checks during ingest loop iterations.
-model: haiku
-# ... (trimmed: read-only tool list)
----
-
-You are a lightweight, stateless monitor for ingest loop health. You read state files and database metrics, then report a concise status summary.
 ... (trimmed)
 ````

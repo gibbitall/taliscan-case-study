@@ -75,7 +75,7 @@ Scan misses close the loop. Three label photos, read on the phone by Apple Visio
 
 ### Agents in production
 
-Records that fail go to a Claude Code agent team: a **researcher** hunts for missing facts, a **variant linker** connects sizes and flavors, a read-only **adversarial validator** challenges the researcher, a **senior reviewer** must sign off before anything is set aside, a reject-by-default **gatekeeper** has the final say on any handoff to me, and a low-cost **monitor** watches the run's health.
+Records that fail go to a Claude Code agent team. A **lead agent** runs the loop and dispatches the work: a **researcher** hunts for missing facts, a **variant linker** connects sizes and flavors, a read-only **adversarial validator** challenges the researcher, a **senior reviewer** must sign off before anything is set aside, and a reject-by-default **gatekeeper** has the final say on any handoff to me.
 
 The guardrails are enforced, not requested: 17 programmatic checks, hooks that block edits weakening enforcement, and a post-mortem agent that grades each run and proposes rule changes.
 
@@ -83,7 +83,7 @@ The hardest rule to get right was when an agent may set a product aside for me. 
 
 - **Parking stopped counting as progress.** Set-aside items had counted as cleared work, which quietly rewarded parking.
 - **The exit got expensive, not forbidden.** A database trigger and a gated code path required two research rounds and a senior review, then approval from a gatekeeper that rejected by default and named the sources not yet tried. Each cycle also had a cap.
-- **Every verdict was labeled.** Each resolved set-aside got a reason code. About two-thirds turned out to be cases the coordinating agent should have handled itself, and the labels pointed to the fix: the agent, its instructions, or a standing rule.
+- **Every verdict was labeled.** Each resolved set-aside got a reason code. About two-thirds turned out to be cases the lead agent should have handled itself, and the labels pointed to the fix: the agent, its instructions, or a standing rule.
 - **Scope was written down.** Rules spelled out which calls agents could make on their own, so fewer cases needed me.
 
 Set-asides fell from nearly one for every product verified in late February to about one in 40 by late March, and from April through launch week the queue waiting on me held at one to four items.
