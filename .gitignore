@@ -1,0 +1,8 @@
+.DS_Store
+.chrome-profile*/
+node_modules/
+*.log
+
+# Kept local: the render sources (design/) and the single-screen PNGs.
+design/
+screenshots/screens/
