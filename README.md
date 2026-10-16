@@ -2,7 +2,7 @@
 
 An iPhone app that shows families what's really inside their food, personal-care, and cleaning products, and scores each one on the science, not the marketing.
 
-*Built solo with coding agents · Launched on the App Store, May 2026 · Retired, October 2026*
+*Built solo with coding agents · Launched on the App Store, May 2026*
 
 Also available as a [5-page PDF](TaliScan-case-study.pdf).
 
@@ -54,14 +54,14 @@ Food scores combine nutrition (per FDA reference serving), additives, safety, an
 
 The harder problem was the data under the rules. Building it is slow by hand and suits AI, so that is where I put it:
 
-- **Evidence:** AI agents reviewed the literature; I decided which rating changes to adopt.
+- **Evidence:** AI agents researched the literature; I reviewed and approved each rating change.
 - **Catalog:** AI researches each product, a gate checks it, and agents repair what fails.
 
 ### The evidence behind every score
 
-The evidence base covers 307 food additives, each rated high, moderate, low, or safe, plus 63 personal-care and household chemicals, a 28-ingredient EU-ban list, and 14 category contamination risks from published testing.
+The evidence base covers 307 additives, each rated high, moderate, low, or safe, plus 63 personal-care and household chemicals, a 28-ingredient EU-ban list, and 14 category contamination risks from published testing.
 
-In March 2026, four AI research agents worked in parallel through 2023-2026 PubMed, EFSA, FDA, and IARC sources for all 307 additives. Each got evidence notes and a strength grade (146 strong, 148 moderate, 12 weak, 1 insufficient). The sweep proposed 17 tier changes. A tier change moves the score of every product containing that additive, so I chose which to adopt.
+In March 2026, four AI research agents worked in parallel through 2023-2026 PubMed, EFSA, FDA, and IARC sources for all 307 additives. Each got evidence notes and a strength grade (146 strong, 148 moderate, 12 weak, 1 insufficient). The sweep proposed 17 tier changes. A tier change moves the score of every product containing that additive, so I reviewed and approved each one.
 
 Hazard also depends on exposure, so each ingredient is weighted by how it reaches the body (8 routes). The same hazard counts in full in a food you eat, 0.7x in a lotion you leave on, 0.4x in a shampoo you rinse off, and 0.1x for surface contact. And because a trace is not a daily dose, an additive listed after "contains 2% or less of" counts 0.15x.
 
@@ -104,7 +104,7 @@ The agents could do the work; keeping them productive all night was harder. By l
 - **Trustworthy data was the hard problem, so that's where the AI went.**
 - **Agents optimize for whatever counts as done.** When setting work aside counted as progress, they set work aside. Guardrails belong in code, with a human gate for judgment calls.
 - **Long agent runs fail on plumbing, not intelligence.** Every stalled run traced to context limits, lost state, or blocked inputs.
-- **Distribution, not product, was the next bottleneck.** I chose not to fund paid acquisition or go full-time, and retired the app in October 2026.
+- **Distribution, not product, was the next bottleneck.** I chose not to fund paid acquisition or go full-time on it.
 
 ## Stack and code samples
 
