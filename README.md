@@ -2,13 +2,13 @@
 
 An iPhone app that shows families what's really inside their food, personal-care, and cleaning products, and scores each one on the science, not the marketing.
 
-*Built solo with coding agents · Launched on the App Store, May 2026*
+*Built solo · Launched on the App Store, May 2026*
 
 Also available as a [5-page PDF](TaliScan-case-study.pdf).
 
 ![Three TaliScan screens: the barcode scanner, a plain Greek yogurt scored 90 ("Excellent for yogurt") with the reasons behind it, and the yogurt category ranked by score](screenshots/hero.png)
 
-I took TaliScan from PRD to App Store, owning product strategy, specs, and UX and building the iOS app, backend, and data pipeline with coding agents.
+I took TaliScan from PRD to App Store, owning product strategy, specs, and UX and building the iOS app, backend, and data pipeline.
 
 ## One scan, a clear answer
 
